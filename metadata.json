@@ -1,0 +1,6 @@
+{
+  "name": "Bizzjump Drips",
+  "description": "Minimalist editorial fashion and contemporary streetwear storefront with full catalog, cart, checkout architecture, and admin inventory management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

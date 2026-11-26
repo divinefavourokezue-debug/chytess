@@ -1,9 +1,31 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-weight-light: 700;
+  --font-weight-normal: 700;
+  --font-weight-medium: 700;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 700;
+  --text-xs: 0.78rem;
+  --text-xs--line-height: 1.3;
+  --text-sm: 0.88rem;
+  --text-sm--line-height: 1.4;
+  --text-base: 1rem;
+  --text-base--line-height: 1.45;
+  --text-lg: 1.12rem;
+  --text-lg--line-height: 1.4;
+  --text-xl: 1.32rem;
+  --text-xl--line-height: 1.3;
+  --text-2xl: 1.55rem;
+  --text-2xl--line-height: 1.25;
+}
+
 @layer base {
   :root {
-    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Playfair Display', Georgia, serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
     --chytess-white: #ffffff;
     --chytess-surface: #faf8f5;
     --chytess-ink: #1c0709;
@@ -11,17 +33,43 @@
     --chytess-crimson-deep: #8c0d16;
     --chytess-yellow: #f5c518;
     --chytess-yellow-bright: #ffe169;
+    --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  html,
+  body,
+  button,
+  input,
+  textarea,
+  select,
+  span,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 700 !important;
   }
 
   html {
-    font-family: var(--font-sans);
+    font-size: 15px;
     scroll-behavior: smooth;
+    scroll-padding-top: 4.75rem;
+    overflow-x: clip;
     background-color: #ffffff;
     color: #1c0709;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    overflow-x: hidden;
+    overflow-x: clip;
     background-image: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.94) 0%,
@@ -30,10 +78,16 @@
       ),
       url('/assets/aistudio/image_ad0233c8.png');
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-color: #ffffff;
     color: #1c0709;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      background-attachment: fixed;
+    }
   }
 
   ::selection {
@@ -41,8 +95,15 @@
     color: #48050b;
   }
 
-  h1, h2, .font-editorial {
-    font-family: var(--font-serif);
+  :focus-visible {
+    outline: 2px solid var(--chytess-crimson);
+    outline-offset: 2px;
+  }
+
+  .brand-wordmark {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 900 !important;
   }
 }
 
@@ -52,6 +113,26 @@
 
 .text-balance {
   text-wrap: balance;
+}
+
+.brand-wordmark {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 900;
+  -webkit-text-stroke: 0.6px currentColor;
+  paint-order: stroke fill;
+}
+
+.glass-atelier {
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+}
+
+.editorial-card-lift {
+  transition:
+    transform 320ms var(--ease-editorial),
+    border-color 280ms ease,
+    box-shadow 340ms var(--ease-editorial);
 }
 
 @keyframes marqueeGlide {
@@ -88,4 +169,53 @@
     animation: none;
   }
 }
+
+.editorial-rail-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(184, 18, 30, 0.5) rgba(230, 223, 213, 0.45);
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+.editorial-rail-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.editorial-rail-scroll::-webkit-scrollbar-track {
+  background: rgba(230, 223, 213, 0.55);
+  border-radius: 9999px;
+}
+
+.editorial-rail-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #b8121e, #d4421d, #f5c518);
+  border-radius: 9999px;
+}
+
+.rail-mask-right {
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 0%, #000 94%, transparent 100%);
+}
+
+.rail-mask-left {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 100%);
+}
+
+.rail-mask-both {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 4%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
 

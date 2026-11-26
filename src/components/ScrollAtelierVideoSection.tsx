@@ -298,13 +298,13 @@ export function ScrollAtelierVideoSection() {
       id="lookbook-reel-section"
       aria-label={t.theatre.ariaSection}
       className={`relative w-full bg-[#FFFFFF] text-[#1C0709] border-b border-[#EAE3DB] ${
-        shouldReduceMotion ? 'py-20' : 'h-[250vh]'
+        shouldReduceMotion ? 'py-14 sm:py-20' : 'h-[190vh] sm:h-[250vh]'
       }`}
     >
       <div
         className={`${
           shouldReduceMotion ? 'relative' : 'sticky top-0 h-[100dvh]'
-        } w-full overflow-hidden flex flex-col justify-center px-4 sm:px-10 pt-20 pb-8`}
+        } w-full overflow-hidden flex flex-col justify-center px-3 sm:px-10 pt-16 sm:pt-20 pb-5 sm:pb-8`}
       >
         {/* Soft white gallery lighting with delicate sunlit yellow & crimson studio glow */}
         <div
@@ -316,24 +316,24 @@ export function ScrollAtelierVideoSection() {
           }}
         />
 
-        <div className="relative z-10 max-w-[1280px] w-full mx-auto flex flex-col gap-5 sm:gap-6">
+        <div className="relative z-10 max-w-[1280px] w-full mx-auto flex flex-col gap-3.5 sm:gap-6">
           {/* Editorial Theatre Header */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 sm:gap-3">
             <div>
-              <div className="inline-flex items-center gap-3 mb-2">
-                <span className="h-0.5 w-6 bg-[#F5C518]" aria-hidden="true" />
-                <span className="text-[11px] uppercase tracking-[0.26em] text-[#B8121E] font-semibold">
+              <div className="inline-flex items-center gap-2.5 sm:gap-3 mb-1.5 sm:mb-2">
+                <span className="h-0.5 w-5 sm:w-6 bg-[#F5C518]" aria-hidden="true" />
+                <span className="text-[13px] sm:text-[15px] uppercase tracking-[0.16em] sm:tracking-[0.22em] text-[#B8121E] font-semibold">
                   {t.theatre.eyebrow}
                 </span>
               </div>
-              <h2 className="font-editorial text-3xl sm:text-5xl font-normal text-[#1C0709] leading-tight">
+              <h2 className="font-editorial text-2xl sm:text-5xl font-bold text-[#1C0709] leading-tight">
                 {t.theatre.titlePre}{' '}
                 <span className="italic text-[#B8121E]">{t.theatre.titleItalic}</span>{' '}
                 {t.theatre.titlePost}
               </h2>
             </div>
 
-            <div className="flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-[#4A383A]">
+            <div className="flex items-center gap-3 sm:gap-4 text-[13px] sm:text-[15px] uppercase tracking-[0.14em] sm:tracking-[0.18em] text-[#4A383A]">
               <span className="tabular-nums font-bold text-[#B8121E]">
                 00:{String(elapsedSec).padStart(2, '0')} / 00:{String(DURATION_SECONDS).padStart(2, '0')}
               </span>
@@ -341,7 +341,7 @@ export function ScrollAtelierVideoSection() {
                 <button
                   type="button"
                   onClick={() => setReducedPlaying((prev) => !prev)}
-                  className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#B8121E] text-[#FFE169] font-bold cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-[#B8121E] text-[#FFE169] font-bold cursor-pointer"
                 >
                   {reducedPlaying ? (
                     <>
@@ -362,9 +362,9 @@ export function ScrollAtelierVideoSection() {
           {/* Sculpted 3D Cinema Aperture Frame on Gallery White Mat */}
           <div
             ref={frameShellRef}
-            className="relative w-full aspect-video max-h-[62dvh] mx-auto rounded-[24px] sm:rounded-[34px] bg-white p-1.5 sm:p-2 border-2 border-[#F5C518] shadow-[0_32px_80px_rgba(28,7,9,0.14)] will-change-transform"
+            className="relative w-full aspect-video max-h-[62dvh] mx-auto rounded-[20px] sm:rounded-[34px] bg-white p-1.5 sm:p-2 border-2 border-[#F5C518] shadow-[0_32px_80px_rgba(28,7,9,0.14)] will-change-transform"
           >
-            <div className="relative w-full h-full rounded-[18px] sm:rounded-[26px] overflow-hidden bg-[#1C0709]">
+            <div className="relative w-full h-full rounded-[14px] sm:rounded-[26px] overflow-hidden bg-[#1C0709]">
               <canvas
                 ref={canvasRef}
                 aria-label={t.theatre.canvasAria}
@@ -374,34 +374,34 @@ export function ScrollAtelierVideoSection() {
               {/* Subtle inner crimson hairline frame */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-2.5 sm:inset-3.5 rounded-[14px] sm:rounded-[20px] border border-[#F5C518]/35"
+                className="pointer-events-none absolute inset-2 sm:inset-3.5 rounded-[12px] sm:rounded-[20px] border border-[#F5C518]/35"
               />
 
               {/* Soft bottom gradient for legible caption overlay */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1C0709]/85 via-[#1C0709]/35 to-transparent"
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-24 sm:h-28 bg-gradient-to-t from-[#1C0709]/85 via-[#1C0709]/35 to-transparent"
               />
 
               {/* Scroll Cue overlay before scroll starts */}
               {!shouldReduceMotion && !hasScrolledIntoReel && (
-                <div className="pointer-events-none absolute top-5 right-6 flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-[#FFE169] font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
+                <div className="pointer-events-none absolute top-3 right-3.5 sm:top-5 sm:right-6 flex items-center gap-1.5 sm:gap-2 text-[12px] sm:text-[14px] uppercase tracking-[0.14em] sm:tracking-[0.18em] text-[#FFE169] font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
                   <span>{t.theatre.scrollToPlay}</span>
-                  <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
+                  <ArrowDown className="w-3 h-3 sm:w-3.5 sm:h-3.5 animate-bounce" />
                 </div>
               )}
 
               {/* Dynamic Scroll-Synced Narrative Caption */}
-              <div className="pointer-events-none absolute bottom-5 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+              <div className="pointer-events-none absolute bottom-3 left-3.5 right-3.5 sm:bottom-5 sm:left-6 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-1.5 sm:gap-2">
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-[#F5C518] font-semibold">
+                  <p className="text-[12px] sm:text-[14px] uppercase tracking-[0.14em] sm:tracking-[0.18em] text-[#F5C518] font-semibold">
                     {currentBeat.index} · {currentBeat.title}
                   </p>
-                  <p className="text-xs sm:text-sm text-white/95 mt-0.5 max-w-lg">
+                  <p className="text-[14px] sm:text-base text-white/95 mt-0.5 max-w-lg line-clamp-2">
                     {currentBeat.caption}
                   </p>
                 </div>
-                <span className="hidden sm:inline text-[10px] uppercase tracking-[0.22em] text-white/75 whitespace-nowrap">
+                <span className="hidden sm:inline text-[13px] uppercase tracking-[0.18em] text-white/75 whitespace-nowrap">
                   {t.theatre.scrollHint}
                 </span>
               </div>

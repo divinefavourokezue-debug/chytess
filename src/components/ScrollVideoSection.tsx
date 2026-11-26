@@ -1167,7 +1167,7 @@ export function ScrollVideoSection() {
     <section
       ref={trackRef}
       aria-label={t.hero.ariaLabel}
-      className="relative w-full h-[380vh] bg-[#46050B]"
+      className="relative w-full h-[300vh] sm:h-[380vh] bg-[#46050B]"
     >
       {/* 100vw x 100dvh Sticky Full-Surface 3D WebGL Viewport */}
       <div className="sticky top-0 h-[100dvh] w-full overflow-hidden">
@@ -1199,8 +1199,8 @@ export function ScrollVideoSection() {
         />
 
         {/* Minimal Editorial Cinema Timecode + Scroll Cue */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-7 z-10 max-w-[1440px] mx-auto px-6 sm:px-10 flex items-center justify-between">
-          <div className="text-[11px] uppercase tracking-[0.26em] text-[#FEF7DC]/75 font-medium tabular-nums">
+        <div className="pointer-events-none absolute inset-x-0 bottom-5 sm:bottom-7 z-10 max-w-[1440px] mx-auto px-4 sm:px-10 flex items-center justify-between gap-2">
+          <div className="text-[13px] sm:text-[15px] uppercase tracking-[0.16em] sm:tracking-[0.22em] text-[#FEF7DC]/80 font-bold tabular-nums">
             00:{formattedSec} / 00:20
           </div>
 
@@ -1208,7 +1208,7 @@ export function ScrollVideoSection() {
             <button
               type="button"
               onClick={() => setManualPlaying((prev) => !prev)}
-              className="pointer-events-auto h-10 px-5 bg-[#24090B]/90 border border-[#F5C518]/80 text-[#F5C518] text-[11px] uppercase tracking-[0.2em] inline-flex items-center gap-2 hover:bg-[#24090B] transition-colors cursor-pointer"
+              className="pointer-events-auto h-9 sm:h-10 px-4 sm:px-5 bg-[#24090B]/90 border border-[#F5C518]/80 text-[#F5C518] text-[13px] sm:text-[15px] uppercase tracking-[0.14em] sm:tracking-[0.18em] inline-flex items-center gap-2 hover:bg-[#24090B] transition-colors cursor-pointer"
             >
               {manualPlaying ? (
                 <>
@@ -1224,7 +1224,7 @@ export function ScrollVideoSection() {
             </button>
           ) : (
             <div
-              className={`transition-opacity duration-500 flex items-center gap-2.5 text-[11px] uppercase tracking-[0.24em] text-[#F5C518] font-medium ${
+              className={`transition-opacity duration-500 flex items-center gap-2 text-[13px] sm:text-[15px] uppercase tracking-[0.14em] sm:tracking-[0.2em] text-[#F5C518] font-bold ${
                 hasStartedScroll ? 'opacity-0' : 'opacity-100'
               }`}
             >

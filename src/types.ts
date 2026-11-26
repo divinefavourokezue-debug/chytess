@@ -2,6 +2,7 @@ export const CATEGORIES = [
   'Jackets',
   'Suiting',
   'Dresses',
+  'Intimates',
   'Hoodies',
   'Sweatshirts',
   'T-shirts',
@@ -12,6 +13,8 @@ export const CATEGORIES = [
   'Footwear',
   'Caps',
   'Leather Goods',
+  'Jewellery',
+  'Fragrance',
   'Accessories',
 ] as const;
 

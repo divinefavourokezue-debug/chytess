@@ -24,8 +24,19 @@ export function SearchModal({
   useEffect(() => {
     if (!open) {
       setQuery('');
+      return;
     }
-  }, [open]);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [open, onClose]);
 
   if (!open) return null;
 
@@ -49,9 +60,14 @@ export function SearchModal({
     : products.slice(0, 4);
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#1C0709]/45 backdrop-blur-sm flex flex-col">
-      <div className="bg-white border-b-4 border-[#F5C518] shadow-[0_24px_60px_rgba(28,7,9,0.16)]">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-8 py-6">
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={t.nav.searchAria}
+      className="fixed inset-0 z-50 bg-[#1C0709]/50 backdrop-blur-sm flex flex-col"
+    >
+      <div className="bg-white border-b-4 border-[#F5C518] shadow-[0_24px_60px_rgba(28,7,9,0.18)] max-h-[88dvh] overflow-y-auto">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-8 py-5 sm:py-6">
           <div className="flex items-center gap-3 border-b-2 border-[#B8121E] pb-3">
             <Search className="w-5 h-5 text-[#B8121E] shrink-0" />
             <input
@@ -81,7 +97,31 @@ export function SearchModal({
             </button>
           </div>
 
-          <div className="mt-6">
+          {/* Quick Explore Functional Filter Controls */}
+          <div className="mt-3 flex flex-wrap items-center gap-1.5 sm:gap-2">
+            <span className="text-xs uppercase tracking-[0.12em] text-[#5E4B4D] font-semibold mr-1">
+              {t.search.quickLabel}:
+            </span>
+            {t.search.quickTags.map((tag) => {
+              const active = trimmed === tag.toLowerCase();
+              return (
+                <button
+                  key={tag}
+                  type="button"
+                  onClick={() => setQuery(active ? '' : tag)}
+                  className={`px-3 py-1 rounded-md text-xs font-bold transition-colors cursor-pointer whitespace-nowrap ${
+                    active
+                      ? 'bg-[#B8121E] text-[#FFE169]'
+                      : 'bg-[#FAF8F5] text-[#4A383A] hover:text-[#B8121E] border border-[#E6DFD5]'
+                  }`}
+                >
+                  {tag}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="mt-5">
             <div className="flex items-center justify-between mb-4">
               <span className="text-xs uppercase tracking-[0.14em] text-[#B8121E] font-semibold">
                 {trimmed ? t.search.matchingPieces(matches.length) : t.search.highlights}
@@ -93,8 +133,8 @@ export function SearchModal({
                 {t.search.empty(query)}
               </p>
             ) : (
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-                {matches.slice(0, 4).map((prod) => {
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6">
+                {matches.slice(0, 8).map((prod) => {
                   const loc = localizeProduct(prod, lang);
                   return (
                     <button
@@ -113,10 +153,10 @@ export function SearchModal({
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         />
                       </div>
-                      <p className="text-[11px] text-[#B8121E] uppercase tracking-wider font-semibold">
+                      <p className="text-[11px] uppercase tracking-wider text-[#B8121E] font-semibold truncate">
                         {loc.gender} · {loc.category}
                       </p>
-                      <p className="text-sm font-medium text-[#1C0709] truncate group-hover:text-[#B8121E] transition-colors">
+                      <p className="text-sm font-medium text-[#1C0709] truncate group-hover:text-[#B8121E] transition-colors mt-0.5">
                         {loc.name}
                       </p>
                     </button>
@@ -131,3 +171,4 @@ export function SearchModal({
     </div>
   );
 }
+

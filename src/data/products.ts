@@ -929,5 +929,561 @@ export const HARDCODED_PRODUCTS: Product[] = [
     "isFeatured": false,
     "popularity": 91,
     "createdAt": "2026-11-22T12:00:00.000Z"
+  },
+  {
+    "id": "prod-w6",
+    "slug": "burgundy-mulberry-silk-lace-intimates-set",
+    "name": "Burgundy Silk & Lace Intimates Set",
+    "category": "Intimates",
+    "gender": "Women",
+    "collection": "Maison Couture",
+    "price": 165,
+    "description": "Women's luxury lingerie and underwear set tailored in lustrous mulberry satin silk with delicate scalloped French Chantilly lace bralette and matching brief.",
+    "details": [
+      "100% 19-Momme Mulberry Charmeuse Silk",
+      "Scalloped French Chantilly lace trim",
+      "Adjustable silk straps & silk-covered buttons",
+      "Breathable organic cotton gusset lining"
+    ],
+    "images": [
+      "/src/assets/images/women_silk_intimates_set_1795624083995.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Deep Burgundy / Champagne",
+        "hex": "#5C0D12",
+        "image": "/src/assets/images/women_silk_intimates_set_1795624083995.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 24,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 98,
+    "createdAt": "2026-11-25T08:00:00.000Z"
+  },
+  {
+    "id": "prod-w7",
+    "slug": "ribbed-organic-cotton-modal-underwear-trio",
+    "name": "Ribbed Cotton-Modal Underwear Set",
+    "category": "Intimates",
+    "gender": "Women",
+    "collection": "Core Uniform",
+    "price": 95,
+    "description": "Ultra-soft everyday women's underwear and seamless bralette lounge set knitted from breathable fine-ribbed organic cotton-modal in tonal house hues.",
+    "details": [
+      "58% Organic Pima Cotton, 37% Tencel Modal, 5% Elastane",
+      "Soft-touch seamless ribbed support band",
+      "Mid-to-high rise contoured brief silhouette",
+      "Packaged in signature Chytess linen pouch"
+    ],
+    "images": [
+      "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Champagne / Espresso / Crimson",
+        "hex": "#B8121E",
+        "image": "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 36,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 96,
+    "createdAt": "2026-11-25T08:00:00.000Z"
+  },
+  {
+    "id": "prod-u1",
+    "slug": "tailored-cotton-silk-underwear-briefs-pants",
+    "name": "Atelier Cotton-Silk Briefs (Pants)",
+    "category": "Intimates",
+    "gender": "Unisex",
+    "collection": "Core Uniform",
+    "price": 68,
+    "description": "Tailored everyday underwear pants and contoured briefs crafted from combed organic Pima cotton and breathable silk jersey with a tonal woven waistband.",
+    "details": [
+      "78% Organic Pima Cotton, 16% Mulberry Silk, 6% Elastane",
+      "Soft tonal brushed micro-woven waistband",
+      "Flat-lock chafe-free contoured seams",
+      "Three-pack or single boutique presentation"
+    ],
+    "images": [
+      "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal / Ivory / Burgundy",
+        "hex": "#2B2D30",
+        "image": "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 42,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 97,
+    "createdAt": "2026-11-25T19:30:00.000Z"
+  },
+  {
+    "id": "prod-u2",
+    "slug": "atelier-poplin-ribbed-boxers-set",
+    "name": "Tailored Poplin & Ribbed Boxers",
+    "category": "Intimates",
+    "gender": "Men",
+    "collection": "Core Uniform",
+    "price": 78,
+    "description": "Crisp Japanese poplin woven boxer shorts and ribbed organic cotton-modal boxer briefs engineered for tailored drape, breathable airflow, and zero roll.",
+    "details": [
+      "100% High-Twist Poplin & Ribbed Cotton-Modal options",
+      "Tailored side vents & concealed button fly",
+      "Supportive contour pouch construction",
+      "Pre-washed for immediate softness"
+    ],
+    "images": [
+      "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Burgundy / Obsidian / Champagne",
+        "hex": "#5C0D12",
+        "image": "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 38,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 98,
+    "createdAt": "2026-11-25T19:30:00.000Z"
+  },
+  {
+    "id": "prod-u3",
+    "slug": "sculpted-silk-french-lace-brassiere",
+    "name": "Sculpted Silk & Lace Brassiere",
+    "category": "Intimates",
+    "gender": "Women",
+    "collection": "Maison Couture",
+    "price": 135,
+    "description": "Architectural underwire balconette brassiere tailored in deep burgundy mulberry silk satin with scalloped champagne French Chantilly lace and brushed gold clasps.",
+    "details": [
+      "100% 19-Momme Mulberry Silk Satin cups",
+      "Champagne French Chantilly lace overlay",
+      "Brushed gold front & adjustable strap hardware",
+      "Breathable cotton-silk wing lining"
+    ],
+    "images": [
+      "/src/assets/images/women_silk_intimates_set_1795624083995.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Deep Burgundy / Champagne",
+        "hex": "#5C0D12",
+        "image": "/src/assets/images/women_silk_intimates_set_1795624083995.jpg"
+      }
+    ],
+    "sizes": [
+      "32B",
+      "34B",
+      "34C",
+      "36C",
+      "36D",
+      "38D"
+    ],
+    "stock": 26,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 99,
+    "createdAt": "2026-11-25T19:30:00.000Z"
+  },
+  {
+    "id": "prod-u4",
+    "slug": "fine-ribbed-pima-cotton-singlet",
+    "name": "Fine-Ribbed Pima Cotton Singlet",
+    "category": "Intimates",
+    "gender": "Unisex",
+    "collection": "Core Uniform",
+    "price": 62,
+    "description": "Second-skin sleeveless atelier singlet knitted in fine 2×2 ribbed organic Pima cotton and modal for crisp layering under suiting or effortless loungewear.",
+    "details": [
+      "65% Organic Pima Cotton, 35% Micro-Modal",
+      "Tubular seamless torso construction",
+      "Reinforced bound scoop neckline & armholes",
+      "Machine wash cold · Shapes effortlessly"
+    ],
+    "images": [
+      "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Ivory / Charcoal",
+        "hex": "#EFECE6",
+        "image": "/src/assets/images/women_ribbed_underwear_set_1795624083040.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 44,
+    "isNewArrival": true,
+    "isFeatured": false,
+    "popularity": 95,
+    "createdAt": "2026-11-25T19:30:00.000Z"
+  },
+  {
+    "id": "prod-u5",
+    "slug": "sculpted-matte-sheer-atelier-tights",
+    "name": "Sculpted Matte & Sheer Tights",
+    "category": "Intimates",
+    "gender": "Women",
+    "collection": "Maison Couture",
+    "price": 58,
+    "description": "Run-resistant couture hosiery tights engineered with a high-waist smoothing band and velvety 60-denier matte finish, presented in a crimson satin pouch.",
+    "details": [
+      "Ultra-fine Italian multifilament polyamide-elastane",
+      "Graduated soft compression & flat comfort waistband",
+      "Breathable cotton gusset & reinforced sheer toe",
+      "Includes signature crimson silk storage pouch"
+    ],
+    "images": [
+      "/src/assets/images/women_silk_intimates_set_1795624083995.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Obsidian / Espresso / Slate",
+        "hex": "#181818",
+        "image": "/src/assets/images/women_silk_intimates_set_1795624083995.jpg"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 48,
+    "isNewArrival": true,
+    "isFeatured": false,
+    "popularity": 94,
+    "createdAt": "2026-11-25T19:30:00.000Z"
+  },
+  {
+    "id": "prod-a3",
+    "slug": "brushed-gold-chains-medallion-necklace",
+    "name": "18k Brushed Gold Chains & Necklace",
+    "category": "Jewellery",
+    "gender": "Unisex",
+    "collection": "Maison Accessories",
+    "price": 320,
+    "description": "Layered heavyweight Cuban curb link chains paired with a hand-textured 18k brushed gold medallion pendant necklace forged for everyday couture layering.",
+    "details": [
+      "Solid 18k gold vermeil over recycled sterling silver",
+      "Hand-carved organic medallion pendant charm",
+      "Custom lobster clasp & layered length adjusters",
+      "Tarnish-resistant satin atelier finish · Velvet pouch included"
+    ],
+    "images": [
+      "/src/assets/images/accessory_chains_necklace_1795665259812.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Brushed 18k Gold",
+        "hex": "#D4AF37",
+        "image": "/src/assets/images/accessory_chains_necklace_1795665259812.jpg"
+      }
+    ],
+    "sizes": [
+      "45cm",
+      "50cm",
+      "55cm"
+    ],
+    "stock": 18,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 99,
+    "createdAt": "2026-11-25T19:50:00.000Z"
+  },
+  {
+    "id": "prod-a4",
+    "slug": "chrono-atelier-burgundy-gold-watch",
+    "name": "Atelier Burgundy & Gold Watch",
+    "category": "Accessories",
+    "gender": "Unisex",
+    "collection": "Maison Accessories",
+    "price": 540,
+    "description": "Minimalist mechanical dress wristwatch housed in a 39mm brushed gold case with a deep burgundy sunray dial, faceted indices, and hand-stitched espresso leather strap.",
+    "details": [
+      "39mm brushed gold-plated 316L stainless steel case",
+      "Deep oxblood sunray dial & anti-reflective sapphire crystal",
+      "Swiss automatic calibre with 42-hour power reserve",
+      "Quick-release espresso alligator-grain calfskin strap"
+    ],
+    "images": [
+      "/src/assets/images/accessory_luxury_watch_1795665260026.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Burgundy Dial / Espresso",
+        "hex": "#5C0D12",
+        "image": "/src/assets/images/accessory_luxury_watch_1795665260026.jpg"
+      }
+    ],
+    "sizes": [
+      "39mm"
+    ],
+    "stock": 12,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 98,
+    "createdAt": "2026-11-25T19:50:00.000Z"
+  },
+  {
+    "id": "prod-a5",
+    "slug": "sculpted-gold-crimson-enamel-bangles",
+    "name": "Sculpted Gold & Enamel Bangles",
+    "category": "Jewellery",
+    "gender": "Women",
+    "collection": "Maison Accessories",
+    "price": 245,
+    "description": "Architectural wristwear set combining hammered and faceted 18k gold cuff bangles with hinged house crimson enamel bracelets crafted for solo or stacked styling.",
+    "details": [
+      "18k brushed & hammered gold-vermeil alloy core",
+      "Kiln-fired crimson lacquer enamel inlays",
+      "Concealed spring hinge clasp for effortless wear",
+      "Presented in signature Chytess jewellery coffret"
+    ],
+    "images": [
+      "/src/assets/images/accessory_gold_bangles_1795665260475.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Gold / Crimson Enamel",
+        "hex": "#B8121E",
+        "image": "/src/assets/images/accessory_gold_bangles_1795665260475.jpg"
+      }
+    ],
+    "sizes": [
+      "S/M",
+      "M/L"
+    ],
+    "stock": 22,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 97,
+    "createdAt": "2026-11-25T19:50:00.000Z"
+  },
+  {
+    "id": "prod-a6",
+    "slug": "maison-chytess-oud-rose-extrait-perfume",
+    "name": "Oud & Crimson Rose Extrait Perfume",
+    "category": "Fragrance",
+    "gender": "Unisex",
+    "collection": "Maison Accessories",
+    "price": 210,
+    "description": "Long-lasting signature Eau de Parfum uniting spiced saffron, damask crimson rose, warm Sahara amber, and smoked West African oud in faceted crystal with a weighted gold cap.",
+    "details": [
+      "100ml Extrait de Parfum concentration (28% oils)",
+      "Top: Saffron & Bergamot · Heart: Crimson Rose",
+      "Base: Smoked Oud, Warm Amber & White Musk",
+      "Faceted architectural flacon with brushed brass cap"
+    ],
+    "images": [
+      "/src/assets/images/accessory_atelier_perfume_1795665261289.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Amber Oud / Brushed Gold",
+        "hex": "#9E3B16",
+        "image": "/src/assets/images/accessory_atelier_perfume_1795665261289.jpg"
+      }
+    ],
+    "sizes": [
+      "100ml"
+    ],
+    "stock": 30,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 99,
+    "createdAt": "2026-11-25T19:50:00.000Z"
+  },
+  {
+    "id": "prod-w8",
+    "slug": "champagne-silk-pleated-couture-gown",
+    "name": "Champagne Silk Pleated Couture Gown",
+    "category": "Dresses",
+    "gender": "Women",
+    "collection": "Maison Couture",
+    "price": 780,
+    "description": "Floor-length champagne-ivory silk satin evening gown featuring a hand-draped asymmetrical off-shoulder bodice, fine sunburst knife pleats, and sweeping gallery train.",
+    "details": [
+      "100% 22-Momme Mulberry Silk Satin",
+      "Hand-draped sculptural asymmetrical bodice",
+      "Micro-pleated fluid full-length skirt & train",
+      "Full habotai silk lining · Concealed back zip"
+    ],
+    "images": [
+      "/src/assets/images/women_pleated_couture_gown_1795665412399.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Champagne Ivory",
+        "hex": "#EAE0CE",
+        "image": "/src/assets/images/women_pleated_couture_gown_1795665412399.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 8,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 100,
+    "createdAt": "2026-11-25T19:55:00.000Z"
+  },
+  {
+    "id": "prod-w9",
+    "slug": "burgundy-velvet-off-shoulder-evening-gown",
+    "name": "Burgundy Velvet Off-Shoulder Gown",
+    "category": "Dresses",
+    "gender": "Women",
+    "collection": "Maison Couture",
+    "price": 720,
+    "description": "Regal floor-length evening gown sculpted in lustrous deep burgundy silk-blend velvet with an architectural off-shoulder neckline, boned corset waist, and sweeping A-line drape.",
+    "details": [
+      "82% Viscose, 18% Mulberry Silk Couture Velvet",
+      "Boned interior corset bodice for sculpted poise",
+      "Draped off-shoulder wrap collar",
+      "Dry clean only · Atelier Ouagadougou Edition"
+    ],
+    "images": [
+      "/src/assets/images/women_velvet_offshoulder_gown_1795665411385.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Deep Oxblood Velvet",
+        "hex": "#4A0B12",
+        "image": "/src/assets/images/women_velvet_offshoulder_gown_1795665411385.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 10,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 99,
+    "createdAt": "2026-11-25T19:55:00.000Z"
+  },
+  {
+    "id": "prod-w10",
+    "slug": "pearl-silk-blouse-crimson-pleated-midi-skirt",
+    "name": "Pearl Silk Blouse & Crimson Midi Skirt",
+    "category": "Suiting",
+    "gender": "Women",
+    "collection": "Maison Couture",
+    "price": 410,
+    "description": "Effortlessly feminine two-piece ensemble uniting a fluid pearl-ivory mulberry silk tie-neck blouse with a high-waisted house crimson accordion-pleated midi skirt.",
+    "details": [
+      "100% 19-Momme Silk Charmeuse blouse with neck-tie scarf",
+      "Sunburst pleated crimson crepe midi skirt",
+      "Includes slim brushed-gold buckle calfskin belt",
+      "Concealed side-seam pockets & zip closure"
+    ],
+    "images": [
+      "/src/assets/images/women_silk_blouse_midi_skirt_1795665412728.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Pearl Ivory / Crimson",
+        "hex": "#B8121E",
+        "image": "/src/assets/images/women_silk_blouse_midi_skirt_1795665412728.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 15,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 98,
+    "createdAt": "2026-11-25T19:55:00.000Z"
+  },
+  {
+    "id": "prod-w11",
+    "slug": "ivory-french-lace-wrap-cocktail-dress",
+    "name": "Ivory French Lace Wrap Cocktail Dress",
+    "category": "Dresses",
+    "gender": "Women",
+    "collection": "Maison Couture",
+    "price": 490,
+    "description": "Romantic tea-length cocktail wrap dress crafted from delicate blush-ivory floral Chantilly lace layered over silk georgette with scalloped fluted sleeves and waist sash.",
+    "details": [
+      "French floral Chantilly lace over 100% silk slip",
+      "Flattering crossover V-neck wrap waist sash",
+      "Scalloped lace fluted three-quarter sleeves",
+      "Hand-finished flutter midi hemline"
+    ],
+    "images": [
+      "/src/assets/images/women_lace_cocktail_wrap_dress_1795665412836.jpg"
+    ],
+    "colors": [
+      {
+        "name": "Blush Ivory Lace",
+        "hex": "#F3EAE0",
+        "image": "/src/assets/images/women_lace_cocktail_wrap_dress_1795665412836.jpg"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": 14,
+    "isNewArrival": true,
+    "isFeatured": true,
+    "popularity": 97,
+    "createdAt": "2026-11-25T19:55:00.000Z"
   }
 ];

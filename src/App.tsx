@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { EditorialCursor } from './components/EditorialCursor';
 import { Footer, type InfoTopic } from './components/Footer';
 import { HomePage } from './components/HomePage';
 import { InfoPage } from './components/InfoPage';
@@ -86,8 +85,6 @@ export default function App() {
       />
 
       <WhatsAppButton />
-
-      <EditorialCursor />
     </div>
   );
 }

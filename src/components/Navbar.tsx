@@ -29,6 +29,15 @@ export function Navbar({
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [mobileMenuOpen]);
+
   const overlayMode = !scrolled && !mobileMenuOpen;
 
   const sectionLinks: { label: string; id: MainSectionId }[] = [
@@ -45,20 +54,20 @@ export function Navbar({
   return (
     <div className="fixed top-0 left-0 right-0 z-40">
       <header
-        className={`transition-colors duration-300 ${
+        className={`transition-all duration-300 ${
           overlayMode
-            ? 'bg-transparent border-b border-transparent'
-            : 'bg-white/95 backdrop-blur-md border-b-2 border-[#F5C518] shadow-[0_10px_30px_rgba(28,7,9,0.08)]'
+            ? 'bg-gradient-to-b from-[#1C0709]/35 to-transparent border-b border-transparent'
+            : 'bg-white/95 backdrop-blur-xl border-b-2 border-[#F5C518] shadow-[0_10px_30px_rgba(28,7,9,0.08)]'
         }`}
       >
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 h-16 flex items-center justify-between gap-3 sm:gap-8">
+        <div className="max-w-[1440px] mx-auto px-2.5 sm:px-8 h-14 sm:h-16 flex items-center justify-between gap-1.5 sm:gap-8">
           {/* Brand Wordmark & Monogram Logo */}
-          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0 min-w-0">
+          <div className="flex items-center gap-1 sm:gap-3 min-w-0 flex-1 lg:flex-initial">
             <button
               type="button"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
               aria-label={t.nav.toggleMenu}
-              className={`lg:hidden p-2 -ml-2 hover:opacity-75 transition-colors cursor-pointer ${
+              className={`lg:hidden p-1.5 -ml-1 shrink-0 hover:opacity-75 transition-colors cursor-pointer ${
                 overlayMode ? 'text-[#F5C518]' : 'text-[#B8121E]'
               }`}
             >
@@ -70,7 +79,7 @@ export function Navbar({
                 setMobileMenuOpen(false);
                 onScrollToSection();
               }}
-              className={`font-editorial text-base sm:text-2xl font-semibold tracking-[0.14em] sm:tracking-[0.18em] uppercase whitespace-nowrap shrink-0 cursor-pointer transition-colors inline-flex items-center gap-2 sm:gap-2.5 ${
+              className={`brand-wordmark text-[13px] min-[375px]:text-[15px] sm:text-[21px] font-black tracking-[0.03em] min-[375px]:tracking-[0.05em] sm:tracking-[0.1em] uppercase min-w-0 cursor-pointer transition-colors inline-flex items-center gap-1.5 sm:gap-2.5 ${
                 overlayMode ? 'text-[#F5C518]' : 'text-[#B8121E]'
               }`}
             >
@@ -78,16 +87,16 @@ export function Navbar({
                 src="/assets/aistudio/CHYTESS_Crowned_Couture_Monogram_57675c74.png"
                 alt=""
                 aria-hidden="true"
-                className="h-8 sm:h-10 w-auto object-contain shrink-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.22)]"
+                className="h-6 min-[375px]:h-7 sm:h-10 w-auto object-contain shrink-0 drop-shadow-[0_2px_4px_rgba(0,0,0,0.22)]"
               />
-              <span className="truncate">CHYTESS COLLECTION</span>
+              <span className="truncate font-black">CHYTESS COLLECTION</span>
             </button>
           </div>
 
           {/* Main Section Links */}
           <nav
             aria-label="Primary navigation"
-            className={`hidden lg:flex items-center justify-center gap-8 text-[13px] font-medium tracking-wide transition-colors ${
+            className={`hidden lg:flex items-center justify-center gap-8 text-base font-bold tracking-wide transition-colors ${
               overlayMode ? 'text-white' : 'text-[#1C0709]'
             }`}
           >
@@ -108,7 +117,7 @@ export function Navbar({
           </nav>
 
           {/* Language Toggle & Search */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          <div className="flex items-center gap-1 sm:gap-3 shrink-0">
             <div
               role="group"
               aria-label={t.nav.langSwitchAria}
@@ -128,7 +137,7 @@ export function Navbar({
                 type="button"
                 onClick={() => setLang('en')}
                 aria-pressed={lang === 'en'}
-                className={`px-2.5 py-1 rounded-full text-[11px] uppercase tracking-[0.14em] font-bold transition-all cursor-pointer ${
+                className={`px-2 min-[375px]:px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[13px] sm:text-[15px] uppercase tracking-[0.06em] sm:tracking-[0.12em] font-bold transition-all cursor-pointer ${
                   lang === 'en'
                     ? overlayMode
                       ? 'bg-[#F5C518] text-[#48050B] shadow-xs'
@@ -144,7 +153,7 @@ export function Navbar({
                 type="button"
                 onClick={() => setLang('fr')}
                 aria-pressed={lang === 'fr'}
-                className={`px-2.5 py-1 rounded-full text-[11px] uppercase tracking-[0.14em] font-bold transition-all cursor-pointer ${
+                className={`px-2 min-[375px]:px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[13px] sm:text-[15px] uppercase tracking-[0.06em] sm:tracking-[0.12em] font-bold transition-all cursor-pointer ${
                   lang === 'fr'
                     ? overlayMode
                       ? 'bg-[#F5C518] text-[#48050B] shadow-xs'
@@ -162,13 +171,13 @@ export function Navbar({
               type="button"
               onClick={onOpenSearch}
               aria-label={t.nav.searchAria}
-              className={`p-2 transition-colors cursor-pointer ${
+              className={`p-1.5 sm:p-2 transition-colors cursor-pointer ${
                 overlayMode
                   ? 'text-white hover:text-[#F5C518]'
                   : 'text-[#1C0709] hover:text-[#B8121E]'
               }`}
             >
-              <Search className="w-[18px] h-[18px] stroke-[1.75]" />
+              <Search className="w-[17px] h-[17px] sm:w-[18px] sm:h-[18px] stroke-[1.75]" />
             </button>
           </div>
         </div>
@@ -199,7 +208,7 @@ export function Navbar({
                 className="text-left text-sm font-semibold text-[#B8121E] pt-2 flex items-center justify-between cursor-pointer"
               >
                 <span>{lang === 'en' ? 'Français (FR)' : 'English (EN)'}</span>
-                <span className="px-2.5 py-0.5 rounded-full bg-[#F5C518] text-[#48050B] text-[11px] uppercase tracking-[0.14em] font-bold">
+                <span className="px-2.5 py-0.5 rounded-full bg-[#F5C518] text-[#48050B] text-xs uppercase tracking-[0.12em] font-bold">
                   {lang === 'en' ? 'FR' : 'EN'}
                 </span>
               </button>

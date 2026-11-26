@@ -724,20 +724,49 @@ export function ClothingCarousel3D({
   const activeColorIdx = colorSelection[activeProduct.id] ?? 0;
   const activeColor = activeProduct.colors[activeColorIdx] || activeProduct.colors[0];
 
+  const isAccessoryCategory = [
+    'Accessories',
+    'Leather Goods',
+    'Caps',
+    'Jewellery',
+    'Fragrance',
+  ].includes(activeProduct.category);
+
+  const verticalDivisionLabel =
+    activeProduct.category === 'Intimates'
+      ? t.grid.verticalUnderwear
+      : isAccessoryCategory
+        ? t.grid.verticalAccessories
+        : activeProduct.gender === 'Men'
+          ? t.grid.verticalMen
+          : activeProduct.gender === 'Women'
+            ? t.grid.verticalWomen
+            : t.grid.verticalUnisex;
+
+  const verticalDivisionCode =
+    activeProduct.category === 'Intimates'
+      ? '03'
+      : isAccessoryCategory
+        ? '04'
+        : activeProduct.gender === 'Men'
+          ? '01'
+          : activeProduct.gender === 'Women'
+            ? '02'
+            : '00';
+
   return (
     <div className="relative select-none">
       {/* 3D Canvas Stage */}
-      <div className="relative h-[440px] sm:h-[520px] w-full">
+      <div className="relative h-[350px] sm:h-[520px] w-full">
         {!webglFailed ? (
           <div
             ref={mountRef}
-            data-cursor="stage"
             className="w-full h-full touch-pan-y"
             aria-label={t.carousel.ariaStage}
           />
         ) : (
           /* Graceful Curved-Edge Fallback Carousel */
-          <div className="w-full h-full flex items-center justify-center overflow-hidden px-6">
+          <div className="w-full h-full flex items-center justify-center overflow-hidden px-4 sm:px-6">
             <div className="flex items-center justify-center gap-6">
               {[-1, 0, 1].map((offset) => {
                 const idx =
@@ -754,9 +783,9 @@ export function ClothingCarousel3D({
                     onClick={() =>
                       isCenter ? onSelectProduct(item) : handleStep(offset as -1 | 1)
                     }
-                    className={`relative overflow-hidden rounded-[32px] transition-all duration-500 cursor-pointer shadow-xl bg-white ${
+                    className={`relative overflow-hidden rounded-[24px] sm:rounded-[32px] transition-all duration-500 cursor-pointer shadow-xl bg-white ${
                       isCenter
-                        ? 'w-[240px] sm:w-[290px] aspect-[3/4] scale-100 opacity-100 ring-2 ring-[#B8121E]'
+                        ? 'w-[210px] sm:w-[290px] aspect-[3/4] scale-100 opacity-100 ring-2 ring-[#B8121E]'
                         : 'hidden sm:block w-[200px] aspect-[3/4] scale-90 opacity-60'
                     }`}
                   >
@@ -772,47 +801,73 @@ export function ClothingCarousel3D({
           </div>
         )}
 
+        {/* Stylish Vertical Division Placard Beside Active Carousel Garment */}
+        <aside
+          aria-label={verticalDivisionLabel}
+          className="pointer-events-none absolute left-1.5 sm:left-24 top-3 sm:top-1/2 sm:-translate-y-1/2 z-20 w-8 sm:w-12 rounded-[14px] sm:rounded-[20px] bg-white/94 backdrop-blur-md border border-[#E6DFD5] shadow-[0_12px_30px_rgba(28,7,9,0.1)] flex flex-col items-center justify-between py-2.5 sm:py-4 overflow-hidden"
+        >
+          <span
+            aria-hidden="true"
+            className="w-full h-[3px] absolute top-0 inset-x-0 bg-gradient-to-r from-[#B8121E] via-[#F5C518] to-[#B8121E]"
+          />
+          <span className="text-[11px] sm:text-[13px] font-bold tabular-nums tracking-[0.12em] text-[#B8121E] pt-0.5">
+            {verticalDivisionCode}
+          </span>
+          <div className="flex flex-col items-center gap-1.5 sm:gap-2.5 py-2 sm:py-3">
+            <span
+              aria-hidden="true"
+              className="w-[1.5px] h-3 sm:h-5 bg-gradient-to-b from-transparent via-[#F5C518] to-[#B8121E]"
+            />
+            <span className="font-editorial text-[14px] sm:text-[19px] font-bold uppercase tracking-[0.2em] sm:tracking-[0.26em] text-[#1C0709] whitespace-nowrap [writing-mode:vertical-rl] rotate-180">
+              {verticalDivisionLabel}
+            </span>
+            <span
+              aria-hidden="true"
+              className="w-[1.5px] h-3 sm:h-5 bg-gradient-to-b from-[#B8121E] via-[#F5C518] to-transparent"
+            />
+          </div>
+          <span aria-hidden="true" className="w-3 sm:w-4 h-0.5 bg-[#F5C518]" />
+        </aside>
+
         {/* Side Navigation Controls */}
         {products.length > 1 && (
           <>
             <button
               type="button"
-              data-cursor="link"
               onClick={() => handleStep(-1)}
               aria-label={t.carousel.prev}
-              className="absolute left-2 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 border border-[#B8121E]/25 text-[#B8121E] hover:bg-[#B8121E] hover:text-[#FFE169] hover:scale-105 flex items-center justify-center shadow-[0_10px_26px_rgba(28,7,9,0.12)] backdrop-blur-md transition-all cursor-pointer"
+              className="absolute left-1.5 sm:left-8 top-[64%] sm:top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white/95 border border-[#B8121E]/25 text-[#B8121E] hover:bg-[#B8121E] hover:text-[#FFE169] hover:scale-105 flex items-center justify-center shadow-[0_10px_26px_rgba(28,7,9,0.12)] backdrop-blur-md transition-all cursor-pointer"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button
               type="button"
-              data-cursor="link"
               onClick={() => handleStep(1)}
               aria-label={t.carousel.next}
-              className="absolute right-2 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 border border-[#B8121E]/25 text-[#B8121E] hover:bg-[#B8121E] hover:text-[#FFE169] hover:scale-105 flex items-center justify-center shadow-[0_10px_26px_rgba(28,7,9,0.12)] backdrop-blur-md transition-all cursor-pointer"
+              className="absolute right-1.5 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white/95 border border-[#B8121E]/25 text-[#B8121E] hover:bg-[#B8121E] hover:text-[#FFE169] hover:scale-105 flex items-center justify-center shadow-[0_10px_26px_rgba(28,7,9,0.12)] backdrop-blur-md transition-all cursor-pointer"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </>
         )}
       </div>
 
       {/* Motion & Velocity Controls Bar */}
-      <div className="flex flex-wrap items-center justify-center gap-3 mt-1 mb-5 px-4">
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-white/95 border border-[#E6DFD5] px-2.5 py-1.5 backdrop-blur-md shadow-[0_10px_28px_rgba(28,7,9,0.08)]">
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-1 mb-4 sm:mb-5 px-2 sm:px-4">
+        <div className="inline-flex max-w-full flex-wrap items-center justify-center gap-1 sm:gap-1.5 rounded-2xl sm:rounded-full bg-white/95 border border-[#E6DFD5] px-2 sm:px-2.5 py-1 sm:py-1.5 backdrop-blur-md shadow-[0_10px_28px_rgba(28,7,9,0.08)]">
           <button
             type="button"
             onClick={() => setIsPlaying((prev) => !prev)}
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] uppercase tracking-[0.16em] font-semibold text-[#1C0709] hover:text-[#B8121E] transition-colors cursor-pointer whitespace-nowrap shrink-0"
+            className="inline-flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3.5 py-1 rounded-full text-[13px] sm:text-[15px] uppercase tracking-[0.08em] sm:tracking-[0.14em] font-bold text-[#1C0709] hover:text-[#B8121E] transition-colors cursor-pointer whitespace-nowrap shrink-0"
           >
             {isPlaying ? (
               <>
-                <Pause className="w-3.5 h-3.5 text-[#B8121E]" />
+                <Pause className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B8121E]" />
                 <span>{t.carousel.auto}</span>
               </>
             ) : (
               <>
-                <Play className="w-3.5 h-3.5 text-[#B8121E]" />
+                <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B8121E]" />
                 <span>{t.carousel.play}</span>
               </>
             )}
@@ -820,7 +875,7 @@ export function ClothingCarousel3D({
 
           <span className="h-4 w-px bg-[#E6DFD5]" aria-hidden="true" />
 
-          <div className="inline-flex items-center gap-1" role="group" aria-label={t.carousel.speedAria}>
+          <div className="inline-flex items-center gap-0.5 sm:gap-1" role="group" aria-label={t.carousel.speedAria}>
             <Gauge className="w-3.5 h-3.5 text-[#B8121E] ml-1.5 mr-0.5 hidden sm:inline" />
             {([1, 2, 3] as SpeedLevel[]).map((level) => (
               <button
@@ -830,7 +885,7 @@ export function ClothingCarousel3D({
                   setSpeedLevel(level);
                   setIsPlaying(true);
                 }}
-                className={`px-2.5 py-1 rounded-full text-[11px] font-bold tabular-nums transition-colors cursor-pointer ${
+                className={`px-2 sm:px-2.5 py-1 rounded-full text-[13px] sm:text-[15px] font-bold tabular-nums transition-colors cursor-pointer ${
                   speedLevel === level
                     ? 'bg-[#B8121E] text-[#FFE169]'
                     : 'text-[#4A383A] hover:text-[#B8121E]'
@@ -846,17 +901,17 @@ export function ClothingCarousel3D({
           <button
             type="button"
             onClick={handlePushForward}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#F5C518] hover:bg-[#FFE169] text-[#48050B] text-[11px] uppercase tracking-[0.14em] font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
+            className="inline-flex items-center gap-1 sm:gap-1.5 px-3 sm:px-4 py-1 rounded-full bg-[#F5C518] hover:bg-[#FFE169] text-[#48050B] text-[13px] sm:text-[15px] uppercase tracking-[0.08em] sm:tracking-[0.12em] font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
           >
             <span>{t.carousel.pushForward}</span>
-            <FastForward className="w-3.5 h-3.5" />
+            <FastForward className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
           </button>
         </div>
       </div>
 
       {/* Curved Couture Placard for Active 3D Garment */}
-      <div className="max-w-2xl mx-auto px-4 text-center">
-        <div className="relative overflow-hidden rounded-[28px] bg-white/96 backdrop-blur-md border border-[#E6DFD5] px-6 sm:px-10 py-6 shadow-[0_24px_60px_rgba(28,7,9,0.1)]">
+      <div className="max-w-2xl mx-auto px-1 sm:px-4 text-center">
+        <div className="relative overflow-hidden rounded-[22px] sm:rounded-[28px] bg-white/96 backdrop-blur-md border border-[#E6DFD5] px-4 sm:px-10 py-5 sm:py-6 shadow-[0_24px_60px_rgba(28,7,9,0.1)]">
           <div
             aria-hidden="true"
             className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#B8121E] via-[#F5C518] to-[#B8121E]"
@@ -869,7 +924,7 @@ export function ClothingCarousel3D({
               exit={prefersReducedMotion ? undefined : { opacity: 0, y: -6 }}
               transition={{ duration: 0.18 }}
             >
-              <div className="flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.22em] text-[#B8121E] font-semibold mb-1.5">
+              <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[13px] sm:text-[15px] uppercase tracking-[0.12em] sm:tracking-[0.18em] text-[#B8121E] font-semibold mb-1 sm:mb-1.5">
                 <span>{loc.gender}</span>
                 <span aria-hidden="true" className="text-[#1C0709]/30">·</span>
                 <span className="text-[#4A383A]">{loc.category}</span>
@@ -879,19 +934,19 @@ export function ClothingCarousel3D({
                 </span>
               </div>
 
-              <h3 className="font-editorial text-3xl sm:text-4xl font-normal text-[#1C0709] leading-tight">
+              <h3 className="font-editorial text-2xl sm:text-4xl font-bold text-[#1C0709] leading-tight">
                 {loc.name}
               </h3>
 
-              <p className="mt-2 text-xs sm:text-sm text-[#4A383A] max-w-lg mx-auto line-clamp-2 leading-relaxed">
+              <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-[#4A383A] max-w-lg mx-auto line-clamp-2 leading-relaxed">
                 {loc.description}
               </p>
             </motion.div>
           </AnimatePresence>
 
-          <div className="mt-5 pt-4 border-t border-[#EAE3DB] flex flex-wrap items-center justify-center gap-6">
+          <div className="mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-[#EAE3DB] flex flex-wrap items-center justify-center gap-3 sm:gap-6">
             {activeProduct.colors.length > 0 && (
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center gap-2">
                 {activeProduct.colors.map((color, idx) => {
                   const colorLabel = loc.translateColor(color.name);
                   return (
@@ -906,7 +961,7 @@ export function ClothingCarousel3D({
                       }
                       title={colorLabel}
                       aria-label={`${t.carousel.selectColor} ${colorLabel}`}
-                      className={`w-4 h-4 rounded-full transition-transform cursor-pointer ${
+                      className={`w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full transition-transform cursor-pointer ${
                         idx === activeColorIdx
                           ? 'ring-2 ring-[#B8121E] ring-offset-2 ring-offset-white scale-110'
                           : 'ring-1 ring-black/20 hover:scale-110'
@@ -915,7 +970,7 @@ export function ClothingCarousel3D({
                     />
                   );
                 })}
-                <span className="text-xs text-[#4A383A] ml-1">
+                <span className="text-sm text-[#4A383A] ml-1">
                   {loc.translateColor(activeColor?.name)}
                 </span>
               </div>
@@ -924,7 +979,7 @@ export function ClothingCarousel3D({
             <button
               type="button"
               onClick={() => onSelectProduct(activeProduct)}
-              className="group inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-[#B8121E] hover:bg-[#8C0D16] text-[#FFE169] text-xs uppercase tracking-[0.18em] font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-[0_8px_20px_rgba(184,18,30,0.22)]"
+              className="group inline-flex items-center gap-2 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-[#B8121E] hover:bg-[#8C0D16] text-[#FFE169] text-[13px] sm:text-[15px] uppercase tracking-[0.12em] sm:tracking-[0.16em] font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-[0_8px_20px_rgba(184,18,30,0.22)]"
             >
               <span>{t.carousel.inspectGarment}</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#FFE169] transition-transform group-hover:translate-x-0.5" />

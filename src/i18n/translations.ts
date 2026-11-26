@@ -262,12 +262,178 @@ export const PRODUCT_FR_TRANSLATIONS: Record<string, ProductTranslation> = {
       'Pièce Signature Atelier Ouagadougou',
     ],
   },
+  'prod-w6': {
+    name: 'Ensemble Lingerie Soie Pourpre & Dentelle',
+    description:
+      'Ensemble lingerie et sous-vêtements femme confectionné en satin de soie de mûrier bordeaux profond et dentelle de Chantilly française, avec bralette et culotte assorties.',
+    details: [
+      '100 % charmeuse de soie de mûrier 19 mommes',
+      'Bordures en dentelle de Chantilly festonnée',
+      'Bretelles réglables en soie & boutons recouverts',
+      'Doublure intérieure respirante en coton biologique',
+    ],
+  },
+  'prod-w7': {
+    name: 'Coffret Sous-Vêtements Côtelés Coton-Modal',
+    description:
+      'Ensemble de sous-vêtements et bralettes du quotidien pour femme tricoté en maille côtelée ultra-douce coton biologique et modal dans les tons signature de la maison.',
+    details: [
+      '58 % coton Pima biologique, 37 % modal Tencel, 5 % élasthanne',
+      'Bande de maintien côtelée sans coutures',
+      'Culotte galbante taille mi-haute à haute',
+      'Présenté en pochette en lin signée Chytess',
+    ],
+  },
+  'prod-u1': {
+    name: 'Slips Tailleur Coton & Soie',
+    description:
+      'Sous-vêtements slips ergonomiques confectionnés en coton Pima biologique peigné et jersey de soie respirant, finis d’une ceinture tissée ton sur ton.',
+    details: [
+      '78 % coton Pima biologique, 16 % soie de mûrier, 6 % élasthanne',
+      'Ceinture micro-tissée douce ton sur ton',
+      'Coutures plates anti-frottements',
+      'Présentation atelier individuelle ou coffret',
+    ],
+  },
+  'prod-u2': {
+    name: 'Boxers Popeline & Maille Côtelée',
+    description:
+      'Caleçons boxers en popeline japonaise croquante et boxers côtelés en coton-modal biologique pensés pour une aisance respirante et un maintien impeccable.',
+    details: [
+      'Popeline haute torsion 100 % coton & maille côtelée coton-modal',
+      'Fentes latérales taillées & braguette dissimulée',
+      'Poche anatomique de maintien confortable',
+      'Prélavés pour une douceur immédiate',
+    ],
+  },
+  'prod-u3': {
+    name: 'Soutien-Gorge Sculpté Soie & Dentelle',
+    description:
+      'Soutien-gorge balconnet architectural à armatures en satin de soie de mûrier bordeaux profond, habillé de dentelle de Chantilly champagne et fermoirs dorés.',
+    details: [
+      'Bonnets en charmeuse de soie de mûrier 19 mommes',
+      'Dentelle de Chantilly champagne festonnée',
+      'Fermoir avant & réglages en métal doré brossé',
+      'Doublure respirante en coton et soie',
+    ],
+  },
+  'prod-u4': {
+    name: 'Débardeur Singlet Finement Côtelé Pima',
+    description:
+      'Singlet sans manches seconde peau tricoté en fines côtes 2×2 de coton Pima biologique et modal pour des superpositions nettes sous vos costumes.',
+    details: [
+      '65 % coton Pima biologique, 35 % micro-modal',
+      'Corps tubulaire sans coutures latérales',
+      'Encolure et emmanchures gansées renforcées',
+      'Lavage à froid · Tenue durable',
+    ],
+  },
+  'prod-u5': {
+    name: 'Collants Sculptants Mats & Voilés Atelier',
+    description:
+      'Collants haute tenue anti-filage dotés d’une ceinture gainante taille haute et d’un fini mat velouté 60 deniers, présentés dans une pochette en satin pourpre.',
+    details: [
+      'Microfibre italienne multifilament haute douceur',
+      'Compression graduée & ceinture plate confort',
+      'Gousset coton respirant & pointes renforcées',
+      'Livrés avec pochette de rangement en soie pourpre',
+    ],
+  },
+  'prod-a3': {
+    name: 'Chaînes Or Brossé 18 ct & Pendentif',
+    description:
+      'Chaînes maille gourmette épaisses superposées et collier à pendentif médaillon sculpté en or brossé 18 carats, pensés pour sublimer chaque silhouette.',
+    details: [
+      'Vermeil or 18 carats sur argent massif recyclé',
+      'Médaillon organique ciselé à la main',
+      'Fermoir mousqueton sur mesure & maillons réglables',
+      'Finition satinée anti-ternissement · Pochette incluse',
+    ],
+  },
+  'prod-a4': {
+    name: 'Montre Atelier Cadran Bordeaux & Or',
+    description:
+      'Montre habillée mécanique minimaliste au boîtier de 39 mm en acier doré brossé, cadran soleillé bordeaux profond et bracelet en cuir grainé expresso.',
+    details: [
+      'Boîtier 39 mm acier inoxydable 316L doré brossé',
+      'Cadran soleillé bordeaux & verre saphir antireflet',
+      'Mouvement automatique suisse réserve de marche 42 h',
+      'Bracelet en veau grainé expresso interchangeable',
+    ],
+  },
+  'prod-a5': {
+    name: 'Joncs & Bangles Or Sculpté & Émail',
+    description:
+      'Parure architecturale de bracelets joncs martelés et facettés en or 18 carats accompagnés de bangles articulés en émail pourpre.',
+    details: [
+      'Vermeil or 18 carats martelé et facetté',
+      'Incrustations en émail laqué pourpre cuit au four',
+      'Charnière ressort dissimulée haute précision',
+      'Présentés dans leur coffret joaillerie Chytess',
+    ],
+  },
+  'prod-a6': {
+    name: 'Parfum Extrait Oud & Rose Pourpre',
+    description:
+      'Extrait de parfum signature haute tenue mêlant safran épicé, rose pourpre de Damas, ambre du Sahara et oud fumé dans un flacon facetté coiffé d’un capot doré.',
+    details: [
+      'Concentration Extrait de Parfum 100 ml (28 % d’essences)',
+      'Tête : Safran & Bergamote · Cœur : Rose Pourpre',
+      'Fond : Oud Fumé, Ambre Chaud & Musc Blanc',
+      'Flacon architectural taillé et capot laiton brossé',
+    ],
+  },
+  'prod-w8': {
+    name: 'Robe du Soir Plissée Soie Champagne',
+    description:
+      'Robe longue du soir en satin de soie champagne-ivoire dotée d’un bustier asymétrique drapé main, de fins plis soleil et d’une traîne fluide.',
+    details: [
+      '100 % satin de soie de mûrier 22 mommes',
+      'Bustier sculptural drapé asymétrique à la main',
+      'Jupe longue micro-plissée à mouvement fluide',
+      'Doublure intégrale en habotai de soie · Zip dissimulé',
+    ],
+  },
+  'prod-w9': {
+    name: 'Robe Longue Velours Bordeaux Épaules Dénudées',
+    description:
+      'Robe du soir majestueuse en velours de soie bordeaux profond, coupe épaules dénudées sculptée, taille corsetée et jupe évasée tombant jusqu’au sol.',
+    details: [
+      '82 % viscose, 18 % soie de mûrier velours couture',
+      'Corsage baleiné intégré pour un port sculptural',
+      'Col drapé épaules dénudées',
+      'Nettoyage à sec · Édition Atelier Ouagadougou',
+    ],
+  },
+  'prod-w10': {
+    name: 'Blouse Soie Perle & Jupe Midi Plissée Pourpre',
+    description:
+      'Ensemble féminin deux pièces réunissant une blouse fluide à lavallière en soie de mûrier ivoire perle et une jupe midi plissée taille haute pourpre maison.',
+    details: [
+      'Blouse 100 % charmeuse de soie 19 mommes avec lien lavallière',
+      'Jupe midi plissée soleil en crêpe pourpre',
+      'Livrée avec fine ceinture en cuir boucle dorée',
+      'Poches latérales dissimulées & fermeture invisible',
+    ],
+  },
+  'prod-w11': {
+    name: 'Robe Portefeuille Cocktail Dentelle Ivoire',
+    description:
+      'Robe cocktail portefeuille longueur midi en dentelle de Chantilly florale ivoire poudré doublée de georgette de soie, manches volantées et ceinture nouée.',
+    details: [
+      'Dentelle de Chantilly française sur fond de soie pure',
+      'Décolleté cache-cœur croisé et ceinture à nouer',
+      'Manches trois-quarts volantées festonnées',
+      'Ourlet midi fluide fini main',
+    ],
+  },
 };
 
 export const CATEGORY_FR: Record<string, string> = {
   Jackets: 'Vestes & Manteaux',
   Suiting: 'Costumes',
   Dresses: 'Robes',
+  Intimates: 'Lingerie & Sous-vêtements',
   Hoodies: 'Sweats à Capuche',
   Sweatshirts: 'Sweats',
   'T-shirts': 'T-shirts',
@@ -278,6 +444,8 @@ export const CATEGORY_FR: Record<string, string> = {
   Footwear: 'Chaussures',
   Caps: 'Casquettes',
   'Leather Goods': 'Maroquinerie',
+  Jewellery: 'Joaillerie',
+  Fragrance: 'Parfums',
   Accessories: 'Accessoires',
 };
 
@@ -310,6 +478,20 @@ export const COLOR_FR: Record<string, string> = {
   'Obsidian / Oxblood': 'Obsidienne / Bordeaux',
   'Burgundy / Brushed Gold': 'Bordeaux / Or Brossé',
   'Charcoal Slate': 'Ardoise Anthracite',
+  'Deep Burgundy / Champagne': 'Bordeaux / Champagne',
+  'Champagne / Espresso / Crimson': 'Champagne / Expresso / Pourpre',
+  'Charcoal / Ivory / Burgundy': 'Anthracite / Ivoire / Bordeaux',
+  'Burgundy / Obsidian / Champagne': 'Bordeaux / Obsidienne / Champagne',
+  'Ivory / Charcoal': 'Ivoire / Anthracite',
+  'Obsidian / Espresso / Slate': 'Obsidienne / Expresso / Ardoise',
+  'Brushed 18k Gold': 'Or Brossé 18 ct',
+  'Burgundy Dial / Espresso': 'Cadran Bordeaux / Expresso',
+  'Gold / Crimson Enamel': 'Or / Émail Pourpre',
+  'Amber Oud / Brushed Gold': 'Oud Ambré / Or Brossé',
+  'Champagne Ivory': 'Ivoire Champagne',
+  'Deep Oxblood Velvet': 'Velours Bordeaux Profond',
+  'Pearl Ivory / Crimson': 'Ivoire Perle / Pourpre',
+  'Blush Ivory Lace': 'Dentelle Ivoire Poudré',
 };
 
 export const COLLECTION_FR: Record<string, string> = {
@@ -347,6 +529,7 @@ export const COPY = {
         ALL: 'All',
         MEN: 'Men',
         WOMEN: 'Women',
+        UNDERWEAR: 'Underwear',
         FOOTWEAR: 'Footwear',
         ACCESSORIES: 'Accessories',
       },
@@ -377,6 +560,34 @@ export const COPY = {
       titleItalic: 'Silhouettes',
       piecesCount: (count: number) =>
         `${String(count).padStart(2, '0')} Pieces · Select Any Garment to Inspect`,
+      menRowEyebrow: '01 · Menswear Division',
+      menRowTitle: "Men's",
+      menRowTitleItalic: 'Collection',
+      menRowSubtitle: 'Tailored coats, suiting, shirts, fleece, footwear & essentials',
+      womenRowEyebrow: '02 · Complete Womenswear',
+      womenRowTitle: "Women's",
+      womenRowTitleItalic: 'Collection',
+      womenRowSubtitle: 'Coats, suiting, gowns, intimates & underwear, bags, heels & essentials',
+      underwearRowEyebrow: '03 · Underwear Division',
+      underwearRowTitle: 'Underwear',
+      underwearRowTitleItalic: 'Collection',
+      underwearRowSubtitle: 'Sample briefs pants, boxers, sculpted brassieres, singlets, tights & intimates',
+      footwearRowEyebrow: 'Atelier Footwear',
+      footwearRowTitle: 'Hand-Lasted',
+      footwearRowTitleItalic: 'Footwear',
+      footwearRowSubtitle: 'Calfskin sneakers, Chelsea boots & oxblood loafers',
+      accessoriesRowEyebrow: '04 · Accessories Division',
+      accessoriesRowTitle: 'Accessories',
+      accessoriesRowTitleItalic: 'Collection',
+      accessoriesRowSubtitle: 'Chains, necklaces, watches, bangles, perfumes, bags & eyewear',
+      swipeHint: 'Swipe or scroll horizontally',
+      scrollLeftAria: 'Scroll garments left',
+      scrollRightAria: 'Scroll garments right',
+      verticalMen: 'MEN',
+      verticalWomen: 'WOMEN',
+      verticalUnderwear: 'UNDERWEAR',
+      verticalAccessories: 'ACCESSORIES',
+      verticalUnisex: 'UNISEX',
       inspectAria: 'Inspect',
       noPrefix: 'No.',
       newArrival: 'New Arrival',
@@ -447,24 +658,39 @@ export const COPY = {
       collection: 'Collection',
       aboutUs: 'About Us',
       founderCeo: 'Founder & CEO',
+      clientCare: 'Client Care',
+      contact: 'Boutique Contact',
+      shipping: 'Showroom & Delivery',
+      returns: 'Garment Care & Fitting',
+      privacy: 'Privacy Policy',
       phoneLabel: 'Phone',
       rights: 'All rights reserved.',
     },
     search: {
-      placeholder: 'Search men, women, coats, suits, dresses, sneakers...',
+      placeholder: 'Search men, women, gowns, underwear, chains, watches, perfume...',
       clear: 'Clear',
       closeAria: 'Close search',
       highlights: 'Collection Highlights',
+      quickLabel: 'Quick Explore',
+      quickTags: ['Gowns', 'Men', 'Women', 'Underwear', 'Chains', 'Watches', 'Perfume'],
       matchingPieces: (count: number) => `${count} Matching Pieces`,
       empty: (q: string) =>
-        `No pieces matched “${q}”. Try Men, Women, Jackets, Suiting, Dresses, or Sneakers.`,
+        `No pieces matched “${q}”. Try Men, Women, Gowns, Underwear, Chains, or Watches.`,
     },
     lightbox: {
       closeAria: 'Close photo preview',
       colourways: 'Colourways',
       materialsCut: 'Materials & Cut',
+      sizesLabel: 'Available Sizes',
       selectColor: 'Select colour',
       viewWord: 'view',
+      prevPhotoAria: 'Previous photo',
+      nextPhotoAria: 'Next photo',
+      inquireWhatsapp: 'Inquire on WhatsApp',
+      whatsappProductMsg: (name: string) =>
+        `https://wa.me/22658989891?text=${encodeURIComponent(
+          `Hello CHYTESS COLLECTION Boutique, Ouagadougou, I would like to inquire about "${name}".`
+        )}`,
     },
     whatsapp: {
       asideAria: 'WhatsApp Concierge',
@@ -489,14 +715,14 @@ export const COPY = {
           paragraphs: [
             'CHYTESS COLLECTION is a premier clothing boutique and fashion house located in Ouagadougou, Burkina Faso, dedicated to disciplined proportion, heavyweight natural textiles, and enduring architectural silhouettes.',
             'Each seasonal release bridges modern streetwear sensibility with quiet luxury tailoring—working with dense 520gsm organic cotton fleece, Japanese high-twist poplin, virgin wool outerwear, and hand-lasted footwear.',
-            'From our boutique on Avenue Kwamé N’Krumah in Ouagadougou, we offer direct clothing sales and bespoke fittings designed for daily elegance.',
+            'From our boutique on Avenue Kwamé N’Krumah in Ouagadougou, we welcome guests for private fittings and bespoke styling designed for daily elegance.',
           ],
         },
         contact: {
           eyebrow: 'Boutique Concierge',
           title: 'Contact Us',
           paragraphs: [
-            'Our boutique team in Ouagadougou, Burkina Faso is available Monday through Saturday, 08:30 – 19:00 GMT, to assist with clothing purchases, sizing guidance, and showroom visits.',
+            'Our boutique team in Ouagadougou, Burkina Faso is available Monday through Saturday, 08:30 – 19:00 GMT, to assist with private styling, sizing guidance, and showroom visits.',
             'Boutique Showroom: Avenue Kwamé N’Krumah, Ouagadougou, Burkina Faso.',
           ],
         },
@@ -504,39 +730,39 @@ export const COPY = {
           eyebrow: 'Client Care',
           title: 'Customer Support',
           paragraphs: [
-            'For order modifications, delivery scheduling, or care instructions for virgin wool and full-grain leather goods, reach our concierge using the inquiry form below or write directly to concierge@chytesscollection.com.',
+            'For private styling appointments, delivery scheduling, or care instructions for virgin wool and full-grain leather goods, reach our concierge using the inquiry form below or write directly to concierge@chytesscollection.com.',
           ],
         },
         shipping: {
           eyebrow: 'Dispatch & Logistics',
-          title: 'Shipping Information',
+          title: 'Showroom & Delivery',
           paragraphs: [
-            'All orders are inspected, garment-steamed, and dispatched within 24–48 business hours from our fulfillment studio.',
-            'Complimentary express delivery applies automatically on all orders of $250 or more. Standard regional dispatch within Burkina Faso & West Africa is $12 (1–3 business days). United Kingdom express courier is $22 (2–4 business days). International DHL Express worldwide is $28 (3–5 business days).',
+            'Every piece is inspected, garment-steamed, and carefully prepared within 24–48 business hours at our Ouagadougou atelier.',
+            'Regional courier coordination across Burkina Faso & West Africa takes 1–3 business days, with international concierge courier arrangements available directly through our Ouagadougou team.',
           ],
         },
         returns: {
           eyebrow: 'Client Guarantee',
-          title: 'Returns and Refunds',
+          title: 'Garment Care & Exchanges',
           paragraphs: [
-            'Unworn garments in original condition with tags and garment bags intact may be returned or exchanged within 14 days of delivery.',
-            'Size exchanges are prioritized upon receipt. Approved refunds are processed to the original payment method (Paystack or Flutterwave) within 3–5 business days.',
+            'Unworn garments in original condition with tags and garment bags intact may be scheduled for a size exchange within 14 days of receipt.',
+            'Tailoring adjustments and size exchanges are prioritized by our Ouagadougou showroom team.',
           ],
         },
         privacy: {
           eyebrow: 'Legal & Data Protection',
           title: 'Privacy Policy',
           paragraphs: [
-            'CHYTESS COLLECTION collects only the contact, shipping, and order details required to fulfill purchases, verify payments securely through Paystack or Flutterwave, and send dispatch notifications.',
-            'Payment card numbers are processed directly on encrypted gateway infrastructure and are never stored on CHYTESS COLLECTION servers.',
+            'CHYTESS COLLECTION collects only the contact and appointment details you voluntarily share when reaching out to our Ouagadougou concierge team.',
+            'Client inquiries are handled with strict confidentiality and are never shared with outside third parties.',
           ],
         },
         terms: {
           eyebrow: 'Terms of Service',
           title: 'Terms and Conditions',
           paragraphs: [
-            'By placing an order with CHYTESS COLLECTION, you confirm that all shipping and contact information provided is accurate. Prices are listed in USD and converted transparently at gateway settlement when paying in local currencies.',
-            'Limited capsule garments are subject to real-time inventory availability.',
+            'By submitting a styling or showroom inquiry with CHYTESS COLLECTION, you confirm that your contact information is accurate so our concierge team may assist you.',
+            'Limited capsule garments showcased in our lookbook are subject to current atelier and showroom availability.',
           ],
         },
       },
@@ -567,6 +793,7 @@ export const COPY = {
         ALL: 'Tout',
         MEN: 'Homme',
         WOMEN: 'Femme',
+        UNDERWEAR: 'Sous-vêtements',
         FOOTWEAR: 'Souliers',
         ACCESSORIES: 'Accessoires',
       },
@@ -597,6 +824,34 @@ export const COPY = {
       titleItalic: 'Choisies',
       piecesCount: (count: number) =>
         `${String(count).padStart(2, '0')} Pièces · Sélectionnez une création pour l’explorer`,
+      menRowEyebrow: '01 · Vestiaire Masculin',
+      menRowTitle: 'Section',
+      menRowTitleItalic: 'Homme',
+      menRowSubtitle: 'Manteaux, costumes, surchemises, molleton, souliers & essentiels',
+      womenRowEyebrow: '02 · Vestiaire Féminin Complet',
+      womenRowTitle: 'Section',
+      womenRowTitleItalic: 'Femme',
+      womenRowSubtitle: 'Manteaux, tailleurs, robes, lingerie & sous-vêtements, sacs & souliers',
+      underwearRowEyebrow: '03 · Lingerie & Sous-Vêtements',
+      underwearRowTitle: 'Section',
+      underwearRowTitleItalic: 'Sous-vêtements',
+      underwearRowSubtitle: 'Slips, boxers, soutiens-gorge, débardeurs singlets, collants & lingerie',
+      footwearRowEyebrow: 'Atelier Souliers',
+      footwearRowTitle: 'Souliers',
+      footwearRowTitleItalic: 'Atelier',
+      footwearRowSubtitle: 'Baskets en cuir nappa, bottines Chelsea & mocassins bordeaux',
+      accessoriesRowEyebrow: '04 · Joaillerie, Parfums & Accessoires',
+      accessoriesRowTitle: 'Section',
+      accessoriesRowTitleItalic: 'Accessoires',
+      accessoriesRowSubtitle: 'Chaînes, colliers, montres, joncs bangles, parfums, sacs & lunettes',
+      swipeHint: 'Glisser horizontalement',
+      scrollLeftAria: 'Défiler vers la gauche',
+      scrollRightAria: 'Défiler vers la droite',
+      verticalMen: 'HOMME',
+      verticalWomen: 'FEMME',
+      verticalUnderwear: 'UNDERWEAR',
+      verticalAccessories: 'ACCESSOIRES',
+      verticalUnisex: 'UNISEXE',
       inspectAria: 'Explorer',
       noPrefix: 'N°',
       newArrival: 'Nouveauté',
@@ -667,25 +922,40 @@ export const COPY = {
       collection: 'Collection',
       aboutUs: 'La Maison',
       founderCeo: 'Fondatrice & PDG',
+      clientCare: 'Service Client',
+      contact: 'Contact Boutique',
+      shipping: 'Atelier & Livraison',
+      returns: 'Entretien & Échanges',
+      privacy: 'Confidentialité',
       phoneLabel: 'Téléphone',
       rights: 'Tous droits réservés.',
     },
     search: {
-      placeholder: 'Rechercher homme, femme, manteaux, costumes, robes, baskets...',
+      placeholder: 'Rechercher homme, femme, robes, sous-vêtements, chaînes, montres...',
       clear: 'Effacer',
       closeAria: 'Fermer la recherche',
       highlights: 'Sélections Phares',
+      quickLabel: 'Accès Rapide',
+      quickTags: ['Robes', 'Homme', 'Femme', 'Lingerie', 'Chaînes', 'Montres', 'Parfum'],
       matchingPieces: (count: number) =>
         `${count} ${count > 1 ? 'Pièces Trouvées' : 'Pièce Trouvée'}`,
       empty: (q: string) =>
-        `Aucune création trouvée pour « ${q} ». Essayez Homme, Femme, Vestes, Costumes, Robes ou Baskets.`,
+        `Aucune création trouvée pour « ${q} ». Essayez Homme, Femme, Robes, Lingerie, Chaînes ou Montres.`,
     },
     lightbox: {
       closeAria: 'Fermer l’aperçu photo',
       colourways: 'Coloris',
       materialsCut: 'Matières & Coupe',
+      sizesLabel: 'Tailles Disponibles',
       selectColor: 'Choisir le coloris',
       viewWord: 'vue',
+      prevPhotoAria: 'Photo précédente',
+      nextPhotoAria: 'Photo suivante',
+      inquireWhatsapp: 'Contacter sur WhatsApp',
+      whatsappProductMsg: (name: string) =>
+        `https://wa.me/22658989891?text=${encodeURIComponent(
+          `Bonjour CHYTESS COLLECTION Ouagadougou, je souhaite des informations sur « ${name} ».`
+        )}`,
     },
     whatsapp: {
       asideAria: 'Conciergerie WhatsApp',
@@ -717,7 +987,7 @@ export const COPY = {
           eyebrow: 'Conciergerie Boutique',
           title: 'Contact',
           paragraphs: [
-            'Notre équipe à Ouagadougou est disponible du lundi au samedi, de 08h30 à 19h00 GMT, pour vous accompagner dans vos achats, conseils de taille et visites privées.',
+            'Notre équipe à Ouagadougou est disponible du lundi au samedi, de 08h30 à 19h00 GMT, pour vous accompagner dans vos essayages privés, conseils de taille et visites au salon.',
             'Salon Boutique : Avenue Kwamé N’Krumah, Ouagadougou, Burkina Faso.',
           ],
         },
@@ -725,39 +995,39 @@ export const COPY = {
           eyebrow: 'Service Client',
           title: 'Accompagnement Client',
           paragraphs: [
-            'Pour toute modification de commande, planification de livraison ou conseil d’entretien de vos pièces en laine vierge et cuir pleine fleur, contactez notre conciergerie ci-dessous ou à concierge@chytesscollection.com.',
+            'Pour tout rendez-vous privé, planification d’acheminement ou conseil d’entretien de vos pièces en laine vierge et cuir pleine fleur, contactez notre conciergerie ci-dessous ou à concierge@chytesscollection.com.',
           ],
         },
         shipping: {
           eyebrow: 'Expédition & Logistique',
-          title: 'Livraison',
+          title: 'Atelier & Livraison',
           paragraphs: [
-            'Toutes les commandes sont contrôlées, préparées et expédiées sous 24 à 48 heures ouvrées depuis notre atelier.',
-            'Livraison express offerte dès 250 $ d’achat. Expédition régionale au Burkina Faso et en Afrique de l’Ouest à 12 $ (1–3 jours ouvrés), Royaume-Uni 22 $ (2–4 jours) et DHL Express international à 28 $ (3–5 jours).',
+            'Toutes les créations sont contrôlées, défroissées à la vapeur et préparées sous 24 à 48 heures ouvrées au sein de notre atelier à Ouagadougou.',
+            'L’acheminement régional au Burkina Faso et en Afrique de l’Ouest s’effectue sous 1 à 3 jours ouvrés, avec coordination de courrier international sur demande via notre conciergerie.',
           ],
         },
         returns: {
           eyebrow: 'Garantie Client',
-          title: 'Retours et Échanges',
+          title: 'Entretien & Échanges',
           paragraphs: [
-            'Les pièces non portées dans leur état d’origine avec étiquettes et housses peuvent être retournées ou échangées sous 14 jours.',
-            'Les échanges de taille sont traités en priorité dès réception, et les remboursements validés sont effectués sous 3 à 5 jours ouvrés.',
+            'Les pièces non portées dans leur état d’origine avec étiquettes et housses peuvent être programmées pour un échange de taille sous 14 jours.',
+            'Les ajustements de coupe et échanges de taille sont traités en priorité par notre équipe du salon de Ouagadougou.',
           ],
         },
         privacy: {
           eyebrow: 'Protection des Données',
           title: 'Confidentialité',
           paragraphs: [
-            'CHYTESS COLLECTION collecte uniquement les informations nécessaires au traitement des commandes et à leur acheminement.',
-            'Aucune donnée bancaire n’est conservée sur les serveurs de CHYTESS COLLECTION.',
+            'CHYTESS COLLECTION recueille uniquement les coordonnées que vous partagez volontairement lors de vos échanges avec notre conciergerie à Ouagadougou.',
+            'Vos demandes sont traitées en toute confidentialité et ne sont jamais transmises à des tiers.',
           ],
         },
         terms: {
           eyebrow: 'Conditions Générales',
           title: 'Conditions d’Utilisation',
           paragraphs: [
-            'En passant commande auprès de CHYTESS COLLECTION, vous confirmez l’exactitude de vos coordonnées de livraison.',
-            'Les créations en édition limitée sont proposées sous réserve de disponibilité immédiate.',
+            'En adressant une demande de renseignement ou de rendez-vous à CHYTESS COLLECTION, vous confirmez l’exactitude de vos coordonnées de contact.',
+            'Les créations en édition limitée présentées dans notre lookbook sont proposées selon la disponibilité immédiate en atelier.',
           ],
         },
       },
